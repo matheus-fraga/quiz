@@ -40,10 +40,20 @@
   margin: 0;
   padding: 0;
   transition: all 0.3s ease-out;
-  font-family: 'Inter', sans-serif;
 }
 html{
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+body{
+  min-height: 100vh;
+  min-width: 100vw;
+}
+header{
+  position: fixed;
+}
+footer{
+  position: fixed;
+  bottom: 0;
 }

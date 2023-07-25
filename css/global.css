@@ -1,29 +1,41 @@
 :root{
  /* colors */
-  --background1: #0F172A;
-  --background2:#0B1121;
-  --background3:#1E293B;
-  --text-primary: #E2E8F0;
-  --text-secondary: #94A3B8;
-  --contrast: #37B6EF;
+
+  --light-background: #f0f0f0;
+  --light-background2:#fff;
+  --light-text-primary:#333333;
+  --light-text-secondary:#4e4e4e;
+ 
+  /*dark*/
+  --dark-background: #1e2122;
+  --dark-background2: #282b2c;
+  --dark-text-primary:#f0f0f0;
+  --dark-text-secondary:#cecece;
+  /*componets*/
+  --blue:#007bff;
+  --blue-hover:#0555ac;
+  --green:#126424;
+  --green-hover:#105820;
+  --red:#df7a7ac0;
+  --red-hover: #FF2121;
 
   /* Gap */
-  --1x:0.25rem; /*4px*/
-  --2x:0.5rem;
-  --3x:0.75rem;
-  --4x:1rem;
+  --1x:0.25rem; 
+  --2x:0.5rem;  
+  --3x:0.75rem; 
+  --4x:1rem;    
   --5x:1.25rem;
-  --6x:1.5rem;
-  --7x:1.75rem;
-  --8x:2rem;
-  --9x:2.25rem;
+  --6x:1.5rem; 
+  --7x:1.75rem; 
+  --8x:2rem;    
+  --9x:2.25rem; 
   --10x:2.75rem;
-  --11x:3rem;
+  --11x:3rem;   
   --12x:3.25rem;
-  --15x:4rem;
+  --15x:4rem;     
   --16x:4.25rem;
-  --18x:4.5rem;
-  --20x: 5.5rem;
+  --18x:4.5rem;   
+  --20x:5.5rem;  
   
   /*font size */
   --little:0.625rem;
@@ -40,20 +52,10 @@
   margin: 0;
   padding: 0;
   transition: all 0.3s ease-out;
+  font-family: Arial, sans-serif;
 }
 html{
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-body{
-  min-height: 100vh;
-  min-width: 100vw;
-}
-header{
-  position: fixed;
-}
-footer{
-  position: fixed;
-  bottom: 0;
 }

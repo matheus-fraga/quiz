@@ -52,7 +52,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: var(--3x);
-    justify-conternt: center;
+    justify-content: center;
 }
 .question-body label{
     display: flex;

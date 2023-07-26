@@ -1,9 +1,12 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap');
+
 :root{
  /* colors */
 
   --light-background: #f0f0f0;
   --light-background2:#fff;
-  --light-text-primary:#333333;
+  --light-text-primary:#1e2122;
   --light-text-secondary:#4e4e4e;
  
   /*dark*/
@@ -14,9 +17,9 @@
   /*componets*/
   --blue:#007bff;
   --blue-hover:#0555ac;
-  --green:#126424;
-  --green-hover:#105820;
-  --red:#df7a7ac0;
+  --green:#75f89180;
+  --green-hover:#126424;
+  --red:#f8bdbd7c;
   --red-hover: #FF2121;
 
   /* Gap */
@@ -44,7 +47,7 @@
   --medium-large: 1.15rem;
   --large:1.5rem;
   --extra: 1.75rem;
-  --title:3rem;
+  --title:2.5rem;
 }
 
 *{
@@ -52,10 +55,13 @@
   margin: 0;
   padding: 0;
   transition: all 0.3s ease-out;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter',Arial, sans-serif;
 }
 html{
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+body{
+  background-color: var(--light-background);
 }

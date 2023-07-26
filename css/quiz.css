@@ -1,0 +1,96 @@
+
+header{
+    display: flex;
+    justify-content: center;
+    padding: var(--6x) 0;
+}
+h1{
+    font-size: var(--title);
+    font-weight: 600;
+    color: var(--light-text-primary);
+    letter-spacing: 1px;
+}
+.top-icons{
+    position: fixed;
+    top: var(--8x);
+    right: var(--8x);
+    display: flex;
+    gap: var(--3x);
+}
+.top-icons span{
+    font-weight: 500;   
+    color: var(--light-text-primary);
+    cursor: pointer;
+    font-size: var(--extra);
+}
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: var(--10x) 0;
+
+}
+.questionary-form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--10x);
+}
+.question-container{
+    display: grid;
+    gap: var(--4x);
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding: var(--6x) var(--4x);
+}
+.question-container h2{
+    font-weight: 500;
+    font-size: var(--extra);
+    color: var(--light-text-primary);
+}
+.question-body{
+    display: flex;
+    flex-direction: column;
+    gap: var(--3x);
+    justify-conternt: center;
+}
+.question-body label{
+    display: flex;
+    align-items: center;
+    gap: var(--3x);
+    font-weight: 500;
+    color: var(--light-text-primary);
+}
+.question-body input[type="radio"]{
+    width: var(--4x);
+    height: var(--4x);
+    cursor: pointer;
+}
+.success{
+    background: var(--green);
+    border: 2px solid var(--green-hover);
+}
+.wrong{
+    background: var(--red);
+    border: 2px solid var(--red-hover);
+}
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: var(--6x);
+    padding: var(--10x) 0;
+}
+.done, .restart{
+    padding: var(--2x) var(--4x);
+    font-size: var(--medium-large);
+    background: var(--blue);
+    border: none;
+    border-radius: var(--1x);
+    color: var(--dark-text-primary);    
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+.done:hover, .restart:hover{
+    background: var(--blue-hover);
+}

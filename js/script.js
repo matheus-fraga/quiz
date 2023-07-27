@@ -12,4 +12,3 @@ initToggleTheme();
 showQuestions("HTML");
 showResults();
 findTopFive();
-

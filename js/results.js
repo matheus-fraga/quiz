@@ -36,6 +36,7 @@ console.log(resultsArray);
 
 
 function showResults() {
+    
     var tabela = document.querySelector(".result-table");
     console.log(tabela);
     tabela.innerHTML = `<tr>

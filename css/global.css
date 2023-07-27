@@ -21,7 +21,8 @@
   --green-hover:#126424;
   --red:#f8bdbd7c;
   --red-hover: #FF2121;
-
+  --yellow:#f3f58fbe;
+  --yellow-hover: #c9cc11;
   /* Gap */
   --1x:0.25rem; 
   --2x:0.5rem;  
@@ -44,10 +45,9 @@
   --little:0.625rem;
   --small:0.875rem;
   --medium:1rem;
-  --medium-large: 1.15rem;
-  --large:1.5rem;
-  --extra: 1.75rem;
-  --title:2.5rem;
+  --large:1.25rem;
+  --extra: 1.5rem;
+  --title:2.2rem;
 }
 
 *{
@@ -61,7 +61,4 @@ html{
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-body{
-  background-color: var(--light-background);
 }

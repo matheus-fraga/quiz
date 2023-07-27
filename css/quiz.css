@@ -3,12 +3,17 @@ header{
     display: flex;
     justify-content: center;
     padding: var(--6x) 0;
+    position: fixed;
+    height: 80px;
+    width: 100vw;
+    background: var(--light-background);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 h1{
     font-size: var(--title);
     font-weight: 600;
-    color: var(--light-text-primary);
-    letter-spacing: 1px;
+    font-family: Arial, sans-serif;    
+  
 }
 .top-icons{
     position: fixed;
@@ -17,18 +22,14 @@ h1{
     display: flex;
     gap: var(--3x);
 }
-.top-icons span{
-    font-weight: 500;   
-    color: var(--light-text-primary);
-    cursor: pointer;
-    font-size: var(--extra);
-}
+
 main{
+    
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: var(--10x) 0;
-
+    padding: 100px 0;
+  
 }
 .questionary-form{
     width: 80%;
@@ -45,14 +46,14 @@ main{
 }
 .question-container h2{
     font-weight: 500;
-    font-size: var(--extra);
+    font-size: var(--large);
     color: var(--light-text-primary);
 }
 .question-body{
     display: flex;
     flex-direction: column;
     gap: var(--3x);
-    justify-conternt: center;
+    justify-content: center;
 }
 .question-body label{
     display: flex;
@@ -60,11 +61,16 @@ main{
     gap: var(--3x);
     font-weight: 500;
     color: var(--light-text-primary);
+    font-size: var(--medium);
 }
 .question-body input[type="radio"]{
-    width: var(--4x);
-    height: var(--4x);
+    width: 14px;
+    height: 14px;
     cursor: pointer;
+}
+.warning{
+    background: var(--yellow);
+    border: 2px solid var(--yellow-hover);
 }
 .success{
     background: var(--green);
@@ -74,15 +80,22 @@ main{
     background: var(--red);
     border: 2px solid var(--red-hover);
 }
+
 footer{
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: var(--6x);
-    padding: var(--10x) 0;
+    gap: var(--20x);
+    position: fixed;
+    bottom:0;
+    height: 80px;
+    align-items: center;
+    background: var(--light-background);
+    
 }
-.done, .restart{
-    padding: var(--2x) var(--4x);
+.done, .restart, .next{
+    padding: var(--3x) var(--4x);
+    height: fit-content;
     font-size: var(--medium-large);
     background: var(--blue);
     border: none;
@@ -93,4 +106,7 @@ footer{
 }
 .done:hover, .restart:hover{
     background: var(--blue-hover);
+}
+.next {
+     display: none;
 }

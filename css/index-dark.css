@@ -7,14 +7,15 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0;
+    background-color: var(--dark-background);
+    color: var(--dark-text-primary);
 }
 
 .container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--dark-background2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -35,10 +36,20 @@ header {
     gap: 10px;
     margin-right: 10px;
     justify-content: end;
-    
+}
+
+.material-symbols-outlined{
+    color: var(--dark-text-primary);
 }
 
 #playPauseButton {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+#toggleThemeButton {
     border: none;
     outline: none;
     background: none;
@@ -73,7 +84,7 @@ main {
     margin: 0 auto;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #107aec;
+    background-color: var(--blue);
     color: #fff;
     border: none;
     border-radius: 4px;

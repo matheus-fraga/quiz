@@ -7,6 +7,7 @@ header{
     height: 80px;
     width: 100vw;
     background: var(--light-background);
+    color: var(--light-text-primary);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 h1{
@@ -23,13 +24,16 @@ h1{
     gap: var(--3x);
 }
 
+.material-symbols-outlined{
+    color: var(--light-text-primary);
+}
+
 main{
-    
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 100px 0;
-  
+    background: var(--light-background);
 }
 .questionary-form{
     width: 80%;

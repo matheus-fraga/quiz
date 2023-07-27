@@ -1,0 +1,117 @@
+
+header{
+    display: flex;
+    justify-content: center;
+    padding: var(--6x) 0;
+    position: fixed;
+    height: 80px;
+    width: 100vw;
+    background: var(--dark-background);
+    color: var(--dark-text-primary);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+h1{
+    font-size: var(--title);
+    font-weight: 600;
+    font-family: Arial, sans-serif;    
+  
+}
+.top-icons{
+    position: fixed;
+    top: var(--8x);
+    right: var(--8x);
+    display: flex;
+    gap: var(--3x);
+}
+
+.material-symbols-outlined{
+    color: var(--dark-text-primary);
+}
+
+main{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+    background: var(--dark-background);
+}
+.questionary-form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--10x);
+}
+.question-container{
+    display: grid;
+    gap: var(--4x);
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding: var(--6x) var(--4x);
+}
+.question-container h2{
+    font-weight: 500;
+    font-size: var(--large);
+    color: var(--dark-text-primary);
+}
+.question-body{
+    display: flex;
+    flex-direction: column;
+    gap: var(--3x);
+    justify-content: center;
+}
+.question-body label{
+    display: flex;
+    align-items: center;
+    gap: var(--3x);
+    font-weight: 500;
+    color: var(--dark-text-primary);
+    font-size: var(--medium);
+}
+.question-body input[type="radio"]{
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+.warning{
+    background: var(--yellow);
+    border: 2px solid var(--yellow-hover);
+}
+.success{
+    background: var(--green);
+    border: 2px solid var(--green-hover);
+}
+.wrong{
+    background: var(--red);
+    border: 2px solid var(--red-hover);
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: var(--20x);
+    position: fixed;
+    bottom:0;
+    height: 80px;
+    align-items: center;
+    background: var(--dark-background);
+    
+}
+.done, .restart, .next{
+    padding: var(--3x) var(--4x);
+    height: fit-content;
+    font-size: var(--medium-large);
+    background: var(--blue);
+    border: none;
+    border-radius: var(--1x);
+    color: var(--dark-text-primary);    
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+.done:hover, .restart:hover{
+    background: var(--blue-hover);
+}
+.next {
+     display: none;
+}

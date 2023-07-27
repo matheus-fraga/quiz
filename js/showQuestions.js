@@ -19,7 +19,7 @@ export function showQuestions(theme){
     else if(theme === "CSS"){
         putQuestionsFromTheme(temaCSS); 
         verifyQuestions(temaCSS);
-  
+
     }
     else if(theme === "JS"){
         putQuestionsFromTheme( temaJavaScript ); 

@@ -9,6 +9,7 @@ function salvarNome() {
 document.getElementById("iniciarQuiz").addEventListener("click", function (event) {
         event.preventDefault();
         salvarNome();
+        console.log(nomeUsuario);
     });
 
 export { nomeUsuario };

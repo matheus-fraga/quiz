@@ -56,7 +56,7 @@ header {
     margin-top: 20px;
 }
 
-.theme {
+.theme, .theme2, .theme3 {
     border: 1px solid #ccc;
     padding: 10px;
     flex: 1;

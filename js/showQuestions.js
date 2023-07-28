@@ -1,8 +1,8 @@
 // Importanto todas as questões, e a verificação
-import { temaCSS } from "/js/theme_css.js";
-import { temaHTML } from "/js/theme_html.js";
-import { temaJavaScript } from "/js/theme_js.js";
-import { verifyQuestions } from "/js/verifyQuestions.js";
+import { temaCSS } from "./theme_css.js";
+import { temaHTML } from "./theme_html.js";
+import { temaJavaScript } from "./theme_js.js";
+import { verifyQuestions } from "./verifyQuestions.js";
 
 // Função para mostrar as questões de acordo com o tema selecionado
 export function showQuestions(theme) {

@@ -1,13 +1,31 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--dark-background);
+    background-color: #f8f8f8;
 }
 
 header {
-    background-color: var(--dark-background);
-    color: var(--dark-text-primary);
+    background-color: #107aec;
+    color: #fff;
     padding: 20px;
     text-align: center;
+}
+
+.material-symbols-outlined {
+    color: var(--light-text-primary);
+}
+
+#playPauseButton {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+#toggleThemeButton {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
 }
 
 .container-table {
@@ -24,8 +42,8 @@ header {
 }
 
 .result-table th {
-    background-color: #107aec; 
-    color: var(--light-background);
+    background-color: #107aec;
+    color: #fff;
     padding: 10px;
 }
 
@@ -38,16 +56,14 @@ header {
 .average {
     margin-top: 20px;
     text-align: center;
-    background-color: var(--light-background);
+    background-color: #f0f0f0;
     margin: 0 10px;
 }
 .average #ok {
-    color: #24702C; 
-
+    color: #24702c;
 }
 .average #not-ok {
-    color: #AC2F2F; 
-
+    color: #ac2f2f;
 }
 
 .themes {
@@ -56,11 +72,13 @@ header {
     margin-top: 20px;
 }
 
-.theme {
+.theme1,
+.theme2,
+.theme3 {
     border: 1px solid #ccc;
     padding: 10px;
     flex: 1;
-    background-color: var(--light-background);
+    background-color: #f0f0f0;
 }
 
 footer {

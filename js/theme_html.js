@@ -1,13 +1,14 @@
+// Perguntas do tema HTML
 export const temaHTML = [
     {
-        title: "Qual tag é usada para criar um link em HTML?",
-        value: [
+        title: "Qual tag é usada para criar um link em HTML?", // A pergunta
+        value: [ // As possíveis respostas
             "a) &lt;a&gt;",
             "b) &lt;link&gt;",
             "c) &lt;href&gt;",
             "d) &lt;url&gt;",
         ],
-        answer: 0,
+        answer: 0, // Resposta correta, de acordo com o índice da array anterior
     },
     {
         title: "Qual elemento é usado para criar uma lista não ordenada em HTML?",
@@ -42,10 +43,10 @@ export const temaHTML = [
     {
         title: "Qual atributo é usado para definir o estilo em linha (inline) em um elemento HTML?",
         value: [
-            "a) &lt;style&gt;",
+            "a) &lt;class&gt;",
             "b) &lt;css&gt;",
             "c) &lt;inline&gt;",
-            "d) &lt;class&gt;",
+            "d) &lt;style&gt;",
         ],
         answer: 3,
     },

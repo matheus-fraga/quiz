@@ -1,13 +1,14 @@
+// Perguntas do tema CSS
 export const temaCSS = [
     {
-        title: "Como se refere a uma classe CSS em um seletor?",
-        value: [
+        title: "Como se refere a uma classe CSS em um seletor?", // A pergunta
+        value: [ // As possíveis respostas
             "a) .nome-da-classe",
             "b) #nome-da-classe",
             "c) classe:nome-da-classe",
             "d) ~nome-da-classe",
         ],
-        answer: 0,
+        answer: 0, // Resposta correta, de acordo com o índice da array anterior
     },
     {
         title: "Qual propriedade CSS é usada para definir a cor do texto?",
@@ -62,10 +63,10 @@ export const temaCSS = [
     {
         title: "Qual é a propriedade CSS usada para alinhar o texto à direita de um elemento?",
         value: [
-            "a) text-align: right;",
+            "a) text-align: end;",
             "b) align: right;",
             "c) float: right;",
-            "d) text-align: end;",
+            "d) text-align: right;",
         ],
         answer: 0,
     },

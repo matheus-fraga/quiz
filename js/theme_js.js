@@ -1,13 +1,14 @@
+// Perguntas do tema JavaScript
 export const temaJavaScript = [
     {
-        title: "Qual é a forma correta de se declarar uma variável em JavaScript?",
-        value: [
+        title: "Qual é a forma errada de se declarar uma variável em JavaScript?", // A pergunta
+        value: [ // As possíveis respostas
             "a) variable nomeVar;",
             "b) let nomeVar;",
             "c) var nomeVar;",
             "d) const nomeVar;",
         ],
-        answer: 1,
+        answer: 0, // Resposta correta, de acordo com o índice da array anterior
     },
     {
         title: "Como chamamos uma função em JavaScript?",
@@ -92,11 +93,11 @@ export const temaJavaScript = [
     {
         title: "Qual é a estrutura correta de um loop 'for' em JavaScript?",
         value: [
-            "a) for (i = 0; i < length; i++)",
-            "b) for (i <= length; i++)",
-            "c) for (i = 0; i <= length; i++)",
+            "a) for (i <= length; i++)",
+            "b) for (i = 0; i <= length; i++)",
+            "c) for (i = 0; i < length; i++)",
             "d) for (i < length; i++)",
         ],
-        answer: 0,
+        answer: 2,
     }
 ];

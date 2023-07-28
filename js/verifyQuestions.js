@@ -1,6 +1,7 @@
+// Função para verificar quais são as respostas corretas, e acumular os pontos gerados pelo usuário
 export function verifyQuestions(theme) {
     let totalPoints = 0;
-  
+
 
     const submitQuestionary = document.querySelector(".done");
     const returnPage = document.querySelector(".restart");
@@ -13,7 +14,7 @@ export function verifyQuestions(theme) {
         const formData = new FormData(form);
         let isDone = true;
         questions.forEach((question, index) => {
-            
+
             const checkedValue = formData.get(`question${index}`);
 
             if (checkedValue == theme[index].answer) {
@@ -45,13 +46,13 @@ export function verifyQuestions(theme) {
         const dateConcat = `${day}/${month}/${year}`;
         console.log(
             "carrega: " +
-                "Gustavo " +
-                "tema" +
-                "CSS" +
-                "data" +
-                dateConcat +
-                "nota: " +
-                totalPoints
+            "Gustavo " +
+            "tema" +
+            "CSS" +
+            "data" +
+            dateConcat +
+            "nota: " +
+            totalPoints
         );
     });
 }

@@ -1,3 +1,4 @@
+// Inicia e para a música, além de trocar o ícone
 export function toggleMusic() {
     const audioPlayer = document.getElementById("audioPlayer");
     const iconPlayer = document.getElementById("iconPlayer");
@@ -9,9 +10,4 @@ export function toggleMusic() {
         audioPlayer.pause();
         iconPlayer.innerText = 'volume_off';
     }
-}
-
-export function initMusicPlayer() {
-    const playPauseButton = document.getElementById("playPauseButton");
-    playPauseButton.addEventListener("click", toggleMusic);
 }

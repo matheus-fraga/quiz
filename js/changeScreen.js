@@ -1,25 +1,28 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Squad#1</title>
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/quiz.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
-<body>
-    <header>
-        <h1>Quiz Tema - X </h1>
-    </header>
-    <div class="top-icons">
-            <span class="material-symbols-outlined">dark_mode</span>
-            <span class="material-symbols-outlined">light_mode</span>
-            <span class="material-symbols-outlined">volume_up</span>
-            <span class="material-symbols-outlined">volume_off</span>
-    </div> 
-    <main>
+import { showQuestions } from "./showQuestions.js";
+import { showResults, findTopFive } from "./results.js";
+
+// Função para trocar as cores da página, e o ícone
+export function toggleTheme(icon, background, theme) {
+    if (background == false) {
+        theme.href = theme.href.replace("light", "dark");
+        icon.innerText = "dark_mode";
+    } else {
+        theme.href = theme.href.replace("dark", "light");
+        icon.innerText = "light_mode";
+    }
+}
+
+//Função para alterar o conteúdo da página, para a página do quiz
+export function toQuiz(background, main, footer, theme) {
+    if (background == false) {
+        themeStylesheet.href = "css/quiz-dark.css";
+        iconTheme.innerText = "dark_mode";
+    } else {
+        themeStylesheet.href = "css/quiz-light.css";
+        iconTheme.innerText = "light_mode";
+    }
+
+    main.innerHTML = `    
         <form class="questionary-form">
             <article name="question1" class="question-container">
                 <h2>1. Qual tag é usada para criar um link em HTML?</h2>
@@ -86,14 +89,70 @@
                 </div>
             </article>
         </form>
-    </main>
+    `;
 
-    <footer>
-        <button type="submit" class="done">Concluir</button>
+    footer.innerHTML = `
+        <button type="button" class="done">Concluir</button>
         <button type="button" class="restart">Reiniciar</button>
         <button type="button" class="next">Avançar </button>
-    </footer>
-    <script defer src="../js/script.js" type="module"></script>
-    <script defer src="../js/verifyQuestions.js" type="module"></script>
-</body>
-</html>
+    `;
+
+    // Mostrar questões do tema selecionado
+    showQuestions(theme);
+}
+
+// Função para a página de resultado
+export function toResults(background, h1, main, footer) {
+    if (background == false) {
+        themeStylesheet.href = "css/results-dark.css";
+        iconTheme.innerText = "dark_mode";
+    } else {
+        themeStylesheet.href = "css/results-light.css";
+        iconTheme.innerText = "light_mode";
+    }
+
+    h1.innerText = "Resultados";
+
+    main.innerHTML = `
+        <div class="container-table">
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Melhor Tema</th>
+                        <th>Tempo</th>
+                        <th>Data Quiz</th>
+                        <th>Pontuação</th>
+                    </tr>
+                </thead>
+                <tbody id = "results_Users">
+                </tbody>
+            </table>
+        </div>
+                
+        <div class="average">
+            <p id="ok">Média de acertos: 6,5</p>
+            <p id="not-ok">Média de erros: 4,2</p>
+        </div>
+
+        <div class="themes">
+            <div class="theme1">
+                <h2>HTML</h2>
+            </div>
+            <div class="theme2">
+                <h2>CSS</h2>
+            </div>
+            <div class="theme3">
+                <h2>JavaScript</h2>
+            </div>
+        </div>
+    `;
+
+    footer.innerHTML = `
+        <button type="button" class="restart">Reiniciar</button>
+    `;
+
+    // Mostrar resultados
+    showResults();
+    findTopFive();
+}

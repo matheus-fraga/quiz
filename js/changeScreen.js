@@ -117,7 +117,7 @@ export function toResults(background, h1, main, footer) {
         <div class="container-table">
             <table class="result-table">
                 <thead>
-                    <tr>
+                    <tr id="result-title">
                         <th>Nome</th>
                         <th>Melhor Tema</th>
                         <th>Tempo</th>

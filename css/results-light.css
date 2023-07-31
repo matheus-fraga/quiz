@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
@@ -8,6 +9,13 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+}
+.top-icons {
+    position: fixed;
+    top: var(--8x);
+    right: var(--8x);
+    display: flex;
+    gap: var(--3x);
 }
 
 .material-symbols-outlined {
@@ -32,6 +40,12 @@ header {
     height: 350px;
     overflow: auto;
     margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#result-title {
+    position: sticky;
+    top: 0;
 }
 
 .result-table {
@@ -76,9 +90,10 @@ header {
 .theme2,
 .theme3 {
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 20px;
     flex: 1;
     background-color: #f0f0f0;
+    margin: 10px;
 }
 
 footer {

@@ -80,11 +80,11 @@ export function findTopFive() {
         }
     }
     else{
-        var tabelaJS = document.querySelector(".theme1");
+        var tabelaHTML = document.querySelector(".theme1");
         for (let i = 0; i < listHTML.length; i++) {
-            tabelaJS.innerHTML += `
+            tabelaHTML.innerHTML += `
             <ul>
-                <li>${listJS[i].name} : Nota: ${listJS[i].scoreHTML}</li>
+                <li>${listHTML[i].name} : Nota: ${listHTML[i].scoreHTML}</li>
             </ul>
             `;
         }
@@ -95,17 +95,17 @@ export function findTopFive() {
         for (let i = 0; i < 5; i++) {
             tabelaCSS.innerHTML += `
             <ul>
-                <li>${listCSS[i].name} : Nota: ${listCSS[i].scoreHTML}</li>
+                <li>${listCSS[i].name} : Nota: ${listCSS[i].scoreCSS}</li>
             </ul>
             `;
         }
     }
     else{
-        var tabelaJS = document.querySelector(".theme2");
+        var tabelaCSS = document.querySelector(".theme2");
         for (let i = 0; i < listCSS.length; i++) {
-            tabelaJS.innerHTML += `
+            tabelaCSS.innerHTML += `
             <ul>
-                <li>${listJS[i].name} : Nota: ${listJS[i].scoreHTML}</li>
+                <li>${listCSS[i].name} : Nota: ${listCSS[i].scoreCSS}</li>
             </ul>
             `;
         }
@@ -116,7 +116,7 @@ export function findTopFive() {
         for (let i = 0; i < 5; i++) {
             tabelaJS.innerHTML += `
             <ul>
-                <li>${listJS[i].name} : Nota: ${listJS[i].scoreHTML}</li>
+                <li>${listJS[i].name} : Nota: ${listJS[i].scoreJavaScript}</li>
             </ul>
             `;
         }
@@ -126,7 +126,7 @@ export function findTopFive() {
         for (let i = 0; i < listJS.length; i++) {
             tabelaJS.innerHTML += `
             <ul>
-                <li>${listJS[i].name} : Nota: ${listJS[i].scoreHTML}</li>
+                <li>${listJS[i].name} : Nota: ${listJS[i].scoreJavaScript}</li>
             </ul>
             `;
         }

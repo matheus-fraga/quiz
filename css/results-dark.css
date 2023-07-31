@@ -10,6 +10,14 @@ header {
     text-align: center;
 }
 
+.top-icons {
+    position: fixed;
+    top: var(--8x);
+    right: var(--8x);
+    display: flex;
+    gap: var(--3x);
+}
+
 .material-symbols-outlined {
     color: var(--dark-text-primary);
 }
@@ -28,21 +36,29 @@ header {
     cursor: pointer;
 }
 
+
+#result-title {
+    position: sticky;
+    top: 0;
+}
+
 .container-table {
     height: 350px;
     overflow: auto;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
+
 
 .result-table {
     width: 100%;
     height: 100%;
     border-collapse: collapse;
-    background-color: #f0f0f0;
+    background-color: #949292;
 }
 
 .result-table th {
-    background-color: #107aec;
+    background-color: #022d5a;
     color: var(--light-background);
     padding: 10px;
 }
@@ -56,14 +72,14 @@ header {
 .average {
     margin-top: 20px;
     text-align: center;
-    background-color: var(--light-background);
+    background-color: var(--dark-background);
     margin: 0 10px;
 }
 .average #ok {
-    color: #24702c;
+    color: green;
 }
 .average #not-ok {
-    color: #ac2f2f;
+    color: red;
 }
 
 .themes {
@@ -72,15 +88,16 @@ header {
     margin-top: 20px;
 }
 
-.theme1 {
+.theme1, .theme2, .theme3 {
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 20px;
     flex: 1;
-    background-color: var(--light-background);
+    background-color: #949292;
+    margin: 10px;
 }
 
 footer {
-    background-color: #107aec;
+    background-color: var(--dark-background);
     color: #fff;
     padding: 40px;
     margin-top: 20px;

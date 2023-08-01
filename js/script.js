@@ -24,14 +24,18 @@ playPauseButton.addEventListener("click", toggleMusic);
 const iniciar = document.querySelector("#iniciarQuiz");
 iniciar.addEventListener("click", function () {
     var nomeUsuario = document.getElementById("nome");
+    var mensagemErro = document.getElementById("mensagemErro");
+
     if (nomeUsuario.value.replaceAll(" ", "") != null && nomeUsuario.value.replaceAll(" ", "") !== "") {
         var themeSelect = document.querySelector("#tema");
         var selectedValue = themeSelect.value;
         toQuiz(background, bodyMain, bodyFooter, selectedValue);
         setTimeout(buttonReset, 500);
         setTimeout(buttonResults, 500);
+        mensagemErro.style.display = "none";
     }
     else {
+        mensagemErro.style.display = "block"; // Exibe a mensagem de erro se o campo de nome estiver vazio
         console.log("Sem nome!");
     }
 });

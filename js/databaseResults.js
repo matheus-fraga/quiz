@@ -27,126 +27,122 @@ export class Player {
 // Cria a função para salvar o dia em que foi realizado o quiz
 export function getDateQuestionary() {
     const dateSubmit = new Date();
-    const day = dateSubmit.getDate();
-    const month = dateSubmit.getMonth() + 1;
-    const year = dateSubmit.getFullYear();
+    return formatDate(dateSubmit);
+}
+// Formatar data
+function formatDate(date) {
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = date.getFullYear();
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
 
-    return (`${day}/${month}/${year}`);
+    return `${day}/${month}/${year} ${hours}:${minutes}`;
 }
 
-// Nossos integrantes para popular a página
 let Dantas = new Player(
     "Gabriel Dantas",
     "JavaScript",
-    50.0,
-    getDateQuestionary(),
+    "48:05",
+    formatDate(new Date("2023-03-15 12:45")),
     8
 );
 let Riberi = new Player(
     "Gabriel Riberi Koa",
     "HTML",
-    50.0,
-    getDateQuestionary(),
+    "21:50",
+    formatDate(new Date("2023-05-22 09:15")),
     9
 );
 let Fraga = new Player(
     "Matheus Fraga",
     "CSS",
-    50.0,
-    getDateQuestionary(),
+    "23:07",
+    formatDate(new Date("2023-07-10 14:35")),
     8
 );
 let Quilante = new Player(
     "Gustavo Quilante",
     "JavaScript",
-    50.0,
-    getDateQuestionary(),
+    "36:40",
+    formatDate(new Date("2023-04-01 17:45")),
     10
 );
 let Roberto = new Player(
     "Douglas Roberto",
     "HTML",
-    50.0,
-    getDateQuestionary(),
+    "41:08",
+    formatDate(new Date("2023-08-28 10:30")),
     9
 );
 let Lucas = new Player(
     "Lucas Silva",
     "CSS",
-    50.0,
-    getDateQuestionary(),
+    "15:36",
+    formatDate(new Date("2023-06-12 13:20")),
     7
 );
-
 let Ana = new Player(
     "Ana Souza",
     "JavaScript",
-    50.0,
-    getDateQuestionary(),
+    "28:13",
+    formatDate(new Date("2023-01-20 18:45")),
     6
 );
-
 let Pedro = new Player(
     "Pedro Santos",
     "HTML",
-    50.0,
-    getDateQuestionary(),
+    "10:12",
+    formatDate(new Date("2023-09-05 11:55")),
     9
 );
-
 let Julia = new Player(
     "Julia Oliveira",
     "CSS",
-    50.0,
-    getDateQuestionary(),
+    "09:50",
+    formatDate(new Date("2023-11-17 16:10")),
     10
 );
-
 let Mariana = new Player(
     "Mariana Almeida",
     "HTML",
-    50.0,
-    getDateQuestionary(),
+    "16:22",
+    formatDate(new Date("2023-02-08 08:40")),
     7
 );
-
 let Felipe = new Player(
     "Felipe Pereira",
     "CSS",
-    50.0,
-    getDateQuestionary(),
+    "17:20",
+    formatDate(new Date("2023-10-03 22:25")),
     8
 );
-
 let Isabela = new Player(
     "Isabela Lima",
     "HTML",
-    50.0,
-    getDateQuestionary(),
+    "53:07",
+    formatDate(new Date("2023-06-29 19:15")),
     9
 );
-
 let Guilherme = new Player(
     "Guilherme Carvalho",
     "HTML",
-    50.0,
-    getDateQuestionary(),
+    "55:14",
+    formatDate(new Date("2023-04-17 14:00")),
     10
 );
-
 let Laura = new Player(
     "Laura Rodrigues",
     "JavaScript",
-    50.0,
-    getDateQuestionary(),
+    "45:12",
+    formatDate(new Date("2023-03-02 07:50")),
     8
 );
-
 let Victor = new Player(
     "Victor Oliveira",
     "CSS",
-    50.0,
-    getDateQuestionary(),
+    "14:54",
+    formatDate(new Date("2023-07-25 20:30")),
     7
 );
 

@@ -1,6 +1,6 @@
 import { start } from "./timer.js";
 import { showQuestions } from "./showQuestions.js";
-import { showResults, findTopFive } from "./results.js";
+import { showResults, showAverage, findTopFive } from "./results.js";
 
 // Função para trocar as cores da página, e o ícone
 export function toggleTheme(icon, background, theme) {
@@ -11,11 +11,6 @@ export function toggleTheme(icon, background, theme) {
         theme.href = theme.href.replace("dark", "light");
         icon.innerText = "light_mode";
     }
-}
-
-// Função para ler as variáveis novamente
-function name(params) {
-    
 }
 
 //Função para alterar o conteúdo da página, para a página do quiz
@@ -83,8 +78,8 @@ export function toResults(background, h1, header, main, footer) {
         </div>
                 
         <div class="average">
-            <p id="ok">Média de acertos: 6,5</p>
-            <p id="not-ok">Média de erros: 4,2</p>
+            <p id="ok"></p>
+            <p id="not-ok"></p>
         </div>
 
         <div class="themes">
@@ -106,5 +101,6 @@ export function toResults(background, h1, header, main, footer) {
 
     // Mostrar resultados
     showResults();
+    showAverage();
     findTopFive();
 }

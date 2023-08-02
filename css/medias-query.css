@@ -1,0 +1,100 @@
+/*global*/
+@media screen and (max-width: 800px){
+    header{
+        display: flex !important;
+        align-items: center !important;
+        flex-direction: row-reverse !important;
+        justify-content: space-between !important;
+        gap: var(--3x) !important;
+        width: 100%;
+        display: flex;
+        padding: 0 var(--6x) !important;
+        min-height: 80px;
+        margin: 0 !important;
+       
+    }
+    input[type="range"]{
+        display: none !important;
+    }
+    .top-icons{
+        position: static!important; 
+        gap: var(--2x) !important; 
+        justify-self: right !important;   
+    }
+    .top-icons span{
+        font-size: var(--large);
+        height: fit-content;
+    }
+    main{
+        padding: 0 var(--2x);
+    }
+
+}
+
+/*  Login */ 
+@media screen and (max-width: 680px){
+    #titulo1{
+        font-size: var(--extra);
+    }
+    .title-login{
+        align-self: center !important;
+        text-align:center;
+    }
+    .container{
+        width: 76% !important;
+        height: 28vh !important;
+        display:flex; 
+        flex-direction: column;
+        justify-content: center; 
+        margin: 0 !important;
+    }
+    
+}
+/* Quiz */ 
+@media screen and (max-width: 800px){
+    #timer {
+        font-size: var(--small)!important;
+        padding: var(--1x) var(--2x);
+    }
+    
+}
+/* resultados*/
+@media screen and (max-width: 800px){
+    #tema{
+        background: var(--light-background2);
+        height: var(--8x);
+        padding-left: var(--1x);
+    }
+    .themes{
+        flex-direction: column;
+        padding: var(--6x);
+    }
+    .theme1,
+    .theme2,
+    .theme3{
+        margin:0 !important;
+        
+    }
+    .theme1 ul,
+    .theme2 ul,
+    .theme3 ul{
+        margin:0 !important;
+        padding-left: var(--4x);
+    }
+    .container-table{   
+        width: 100%;
+    }
+    th{
+        padding: var(--4x) 1px !important;
+        font-size: var(--small);
+    }
+    td{
+        padding: var(--2x)!important;
+        font-size: var(--little);
+    }
+    .result-table{
+        width: 98% !important;
+        
+    }
+    
+}

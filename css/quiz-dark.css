@@ -4,7 +4,7 @@ header {
     padding: var(--6x) 0;
     position: fixed;
     height: 80px;
-    width: 100vw;
+    width: 100%;
     background: var(--dark-background);
     color: var(--dark-text-primary);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
@@ -15,9 +15,8 @@ h1 {
     font-family: Arial, sans-serif;
 }
 .top-icons {
-    position: fixed;
-    top: var(--8x);
-    right: var(--8x);
+    position: absolute;
+    right: var(--10x);
     display: flex;
     gap: var(--3x);
 }

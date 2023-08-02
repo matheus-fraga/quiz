@@ -7,8 +7,8 @@ import { toQuiz, toResults, toggleTheme } from "./changeScreen.js";
 export const newPlayer = new Player();
 var background = true;
 const h1 = document.querySelector("h1");
-const bodyHeader = document.querySelector("header");
 const bodyMain = document.querySelector("main");
+const bodyHeaderP = document.querySelector("#timer");
 const bodyFooter = document.querySelector("footer");
 const iconTheme = document.getElementById("iconTheme");
 const themeStylesheet = document.getElementById("themeStylesheet");
@@ -33,7 +33,7 @@ iniciar.addEventListener("click", function () {
     if (nomeUsuario.value.replaceAll(" ", "") != null && nomeUsuario.value.replaceAll(" ", "") !== "") {
         var themeSelect = document.querySelector("#tema");
         saveNameTheme(nomeUsuario.value, themeSelect.value);
-        toQuiz(background, bodyHeader, bodyMain, bodyFooter, themeSelect.value);
+        toQuiz(background, bodyHeaderP, bodyMain, bodyFooter, themeSelect.value);
         setTimeout(buttonReset, 500);
         setTimeout(buttonResults, 500);
         mensagemErro.style.display = "none";
@@ -55,7 +55,7 @@ function buttonReset() {
 function buttonResults() {
     const buttonAdvance = document.querySelector(".next");
     buttonAdvance.addEventListener("click", () => {
-        toResults(background, h1, bodyHeader, bodyMain, bodyFooter);
+        toResults(background, h1, bodyHeaderP, bodyMain, bodyFooter);
         setTimeout(buttonReset, 500);
     });
 }

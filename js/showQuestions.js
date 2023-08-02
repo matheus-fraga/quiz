@@ -60,7 +60,7 @@ export function showQuestions(theme) {
     // Função para alterar os botões da página no footer
     function updateFooter() {
         footerSection.innerHTML = `
-            <button type="submit" class="done">Concluir</button>
+            <button type="button" class="done">Concluir</button>
             <button type="button" class="restart">Reiniciar</button>
             <button type="button" class="next">Avançar </button>
         `

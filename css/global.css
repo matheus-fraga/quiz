@@ -41,11 +41,11 @@
     --20x: 5.5rem;
 
     /*font size */
-    --little: 0.625rem;
+    --little: 0.800rem;
     --small: 0.875rem;
     --medium: 1rem;
     --large: 1.25rem;
-    --extra: 1.5rem;
+    --extra: 1.75rem;
     --title: 2.2rem;
 }
 
@@ -64,7 +64,7 @@ html {
 #timer {
     display: none;
     font-weight: bold; 
-    margin: 10px;
+    
     padding: 5px 10px; 
     border-radius: 10px; 
     background-color: #666; 

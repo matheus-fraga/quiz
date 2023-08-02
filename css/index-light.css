@@ -12,7 +12,7 @@ body {
 
 .container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0;
     padding: 20px;
     background-color: var(--light-background2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -57,9 +57,10 @@ header {
 
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 40px;
+    gap: var(--6x);
 }
 
 .form-group {
@@ -88,4 +89,7 @@ main {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+.form-group button:hover{
+    background-color: var(--blue-hover);
 }

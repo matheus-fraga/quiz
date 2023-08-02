@@ -58,9 +58,10 @@ header {
 
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 40px;
+    gap: var(--6x);
 }
 
 .form-group {
@@ -81,7 +82,7 @@ main {
 
 .form-group button {
     display: block;
-    margin: 0 auto;
+    margin: 0;
     padding: 10px 20px;
     font-size: 16px;
     background-color: var(--blue);
@@ -89,4 +90,7 @@ main {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+.form-group button:hover{
+    background-color: var(--blue-hover);
 }

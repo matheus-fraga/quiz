@@ -1,9 +1,13 @@
+import { Player } from './databaseResults.js';
 import { toggleMusic } from './musicPlayer.js';
+import { saveNameTheme } from './savePlayer.js';
 import { toQuiz, toResults, toggleTheme } from "./changeScreen.js";
 
 // Criando variáveis do HTML principal
+export const newPlayer = new Player();
 var background = true;
 const h1 = document.querySelector("h1");
+const bodyHeader = document.querySelector("header");
 const bodyMain = document.querySelector("main");
 const bodyFooter = document.querySelector("footer");
 const iconTheme = document.getElementById("iconTheme");
@@ -20,7 +24,7 @@ toggleThemeButton.addEventListener("click", () => {
 const playPauseButton = document.getElementById("playPauseButton");
 playPauseButton.addEventListener("click", toggleMusic);
 
-// Função do botão para login para quiz
+// Função do botão login para quiz
 const iniciar = document.querySelector("#iniciarQuiz");
 iniciar.addEventListener("click", function () {
     var nomeUsuario = document.getElementById("nome");
@@ -28,15 +32,14 @@ iniciar.addEventListener("click", function () {
 
     if (nomeUsuario.value.replaceAll(" ", "") != null && nomeUsuario.value.replaceAll(" ", "") !== "") {
         var themeSelect = document.querySelector("#tema");
-        var selectedValue = themeSelect.value;
-        toQuiz(background, bodyMain, bodyFooter, selectedValue);
+        saveNameTheme(nomeUsuario.value, themeSelect.value);
+        toQuiz(background, bodyHeader, bodyMain, bodyFooter, themeSelect.value);
         setTimeout(buttonReset, 500);
         setTimeout(buttonResults, 500);
         mensagemErro.style.display = "none";
     }
     else {
         mensagemErro.style.display = "block"; // Exibe a mensagem de erro se o campo de nome estiver vazio
-        console.log("Sem nome!");
     }
 });
 
@@ -52,7 +55,7 @@ function buttonReset() {
 function buttonResults() {
     const buttonAdvance = document.querySelector(".next");
     buttonAdvance.addEventListener("click", () => {
-        toResults(background, h1, bodyMain, bodyFooter);
+        toResults(background, h1, bodyHeader, bodyMain, bodyFooter);
         setTimeout(buttonReset, 500);
     });
 }

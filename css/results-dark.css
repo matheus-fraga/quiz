@@ -36,7 +36,6 @@ header {
     cursor: pointer;
 }
 
-
 #result-title {
     position: sticky;
     top: 0;
@@ -48,7 +47,6 @@ header {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
 
 .result-table {
     width: 100%;
@@ -88,7 +86,9 @@ header {
     margin-top: 20px;
 }
 
-.theme1, .theme2, .theme3 {
+.theme1,
+.theme2,
+.theme3 {
     border: 1px solid #ccc;
     padding: 20px;
     flex: 1;

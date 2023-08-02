@@ -44,7 +44,7 @@ export function showQuestions(theme) {
                 <div class="question-body">
             `
             question.value.forEach((value, vIndex) => {
-                formHTML += ` 
+                formHTML += `
                 <label>
                     <input type="radio" name="question${index}" value="${vIndex}" required/>
                     ${value}

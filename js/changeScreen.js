@@ -13,6 +13,11 @@ export function toggleTheme(icon, background, theme) {
     }
 }
 
+// Função para ler as variáveis novamente
+function name(params) {
+    
+}
+
 //Função para alterar o conteúdo da página, para a página do quiz
 export function toQuiz(background, header, main, footer, theme) {
     if (background == false) {
@@ -23,7 +28,7 @@ export function toQuiz(background, header, main, footer, theme) {
         iconTheme.innerText = "light_mode";
     }
 
-    header.innerHTML += `<p id="timer">00:00</p>`;
+    header.style.display = "block";
 
     main.innerHTML = `
         <form class="questionary-form">
@@ -58,8 +63,7 @@ export function toResults(background, h1, header, main, footer) {
 
     h1.innerText = "Resultados";
 
-    const timerP = document.querySelector("#timer");
-    header.removeChild(timerP);
+    header.style.display = "none";
 
     main.innerHTML = `
         <div class="container-table">

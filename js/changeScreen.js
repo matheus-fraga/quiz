@@ -1,3 +1,4 @@
+import { start } from "./timer.js";
 import { showQuestions } from "./showQuestions.js";
 import { showResults, findTopFive } from "./results.js";
 
@@ -13,7 +14,7 @@ export function toggleTheme(icon, background, theme) {
 }
 
 //Função para alterar o conteúdo da página, para a página do quiz
-export function toQuiz(background, main, footer, theme) {
+export function toQuiz(background, header, main, footer, theme) {
     if (background == false) {
         themeStylesheet.href = "css/quiz-dark.css";
         iconTheme.innerText = "dark_mode";
@@ -22,70 +23,13 @@ export function toQuiz(background, main, footer, theme) {
         iconTheme.innerText = "light_mode";
     }
 
-    main.innerHTML = `    
+    header.innerHTML += `<p id="timer">00:00</p>`;
+
+    main.innerHTML = `
         <form class="questionary-form">
             <article name="question1" class="question-container">
-                <h2>1. Qual tag é usada para criar um link em HTML?</h2>
+                <h2></h2>
                 <div class="question-body">
-                    <label>
-                        <input type="radio" name="question1" value="0">
-                        a) &lt;a&gt;
-                    </label>
-                    <label>
-                        <input type="radio" name="question1" value="1">
-                        b) &lt;link&gt;
-                    </label>
-                    <label>
-                        <input type="radio" name="question1" value="2">
-                        c) &lt;href&gt;
-                    </label>
-                    <label>
-                        <input type="radio" name="question1" value="3">
-                        d) &lt;url&gt;
-                    </label>
-                </div>
-            </article>
-            <article name="question1" class="question-container success">
-                <h2>2. Qual tag é usada para criar um link em HTML?</h2>
-                <div class="question-body">
-                    <label>
-                        <input type="radio" name="question2" value="0">
-                        a) &lt;a&gt;
-                    </label>
-                    <label>
-                        <input type="radio" name="question2" value="1">
-                        b) &lt;link&gt;
-                    </label>
-                    <label>
-                        <input type="radio" name="question2" value="2">
-                        c) &lt;href&gt;
-                    </label>
-                    <label>
-                        <input type="radio" name="question2" value="3">
-                        d) &lt;url&gt;
-                    </label>
-                </div>
-            </article>
-
-            <article name="question3" class="question-container wrong">
-                <h2>3. Qual tag é usada para criar um link em HTML?</h2>
-                <div class="question-body">
-                    <label>
-                        <input type="radio" name="question3" value="0">
-                        a) &lt;a&gt;
-                    </label>
-                    <label>
-                        <input type="radio" name="question3" value="1">
-                        b) &lt;link&gt;
-                    </label>
-                    <label>
-                        <input type="radio" name="question3" value="2">
-                        c) &lt;href&gt;
-                    </label>
-                    <label>
-                        <input type="radio" name="question3" value="3">
-                        d) &lt;url&gt;
-                    </label>
                 </div>
             </article>
         </form>
@@ -99,10 +43,11 @@ export function toQuiz(background, main, footer, theme) {
 
     // Mostrar questões do tema selecionado
     showQuestions(theme);
+    start();
 }
 
 // Função para a página de resultado
-export function toResults(background, h1, main, footer) {
+export function toResults(background, h1, header, main, footer) {
     if (background == false) {
         themeStylesheet.href = "css/results-dark.css";
         iconTheme.innerText = "dark_mode";
@@ -113,13 +58,16 @@ export function toResults(background, h1, main, footer) {
 
     h1.innerText = "Resultados";
 
+    const timerP = document.querySelector("#timer");
+    header.removeChild(timerP);
+
     main.innerHTML = `
         <div class="container-table">
             <table class="result-table">
                 <thead>
                     <tr id="result-title">
                         <th>Nome</th>
-                        <th>Melhor Tema</th>
+                        <th>Tema</th>
                         <th>Tempo</th>
                         <th>Data Quiz</th>
                         <th>Pontuação</th>

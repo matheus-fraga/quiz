@@ -63,4 +63,10 @@ html {
 }
 #timer {
     display: none;
+    font-weight: bold; 
+    margin: 10px;
+    padding: 5px 10px; 
+    border-radius: 10px; 
+    background-color: #666; 
+    color: white; 
 }

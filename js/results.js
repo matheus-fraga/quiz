@@ -2,11 +2,11 @@ import { resultsArray } from "./databaseResults.js";
 
 // Função para adicionar os resultados na tabela
 export function showResults() {
-    var tabela = document.querySelector("#results_Users");
-    tabela.innerHTML = "";
+    var table = document.querySelector("#results_Users");
+    table.innerHTML = "";
 
     for (let user of resultsArray) {
-        tabela.innerHTML += `
+        table.innerHTML += `
         <tr>
             <td>${user.name}</td>
             <td>${user.theme}</td>
@@ -16,6 +16,24 @@ export function showResults() {
         </tr>
         `;
     }
+}
+
+export function showAverage() {
+    let averageRN = 0;
+    let averageWN = 0;
+    for (let i = 0; i < resultsArray.length; i++) {
+        averageRN += resultsArray[i].score;
+    }
+    averageRN = averageRN / resultsArray.length;
+    for (let i = 0; i < resultsArray.length; i++) {
+        averageWN += 10 - resultsArray[i].score;
+    }
+    averageWN = averageWN / resultsArray.length;
+
+    let averageRight = document.querySelector("#ok");
+    let averageWrong = document.querySelector("#not-ok");
+    averageRight.innerText = `Media de Acertos: ${averageRN.toFixed(2)}`;
+    averageWrong.innerText = `Media de Erros: ${averageWN.toFixed(2)}`;
 }
 
 // Função que printa as 5 melhores notas
@@ -41,9 +59,9 @@ export function findTopFive() {
 
     // Adiciona na tabela os resultados
     if (listHTML.length >= 5) {
-        var tabelaHTML = document.querySelector(".theme1");
+        var tableHTML = document.querySelector(".theme1");
         for (let i = 0; i < 5; i++) {
-            tabelaHTML.innerHTML += `
+            tableHTML.innerHTML += `
             <ul>
                 <li>${listHTML[i].name} : Nota: ${listHTML[i].score}</li>
             </ul>
@@ -51,9 +69,9 @@ export function findTopFive() {
         }
     }
     else {
-        var tabelaHTML = document.querySelector(".theme1");
+        var tableHTML = document.querySelector(".theme1");
         for (let i = 0; i < listHTML.length; i++) {
-            tabelaHTML.innerHTML += `
+            tableHTML.innerHTML += `
             <ul>
                 <li>${listHTML[i].name} : Nota: ${listHTML[i].score}</li>
             </ul>
@@ -62,9 +80,9 @@ export function findTopFive() {
     }
 
     if (listCSS.length >= 5) {
-        var tabelaCSS = document.querySelector(".theme2");
+        var tableCSS = document.querySelector(".theme2");
         for (let i = 0; i < 5; i++) {
-            tabelaCSS.innerHTML += `
+            tableCSS.innerHTML += `
             <ul>
                 <li>${listCSS[i].name} : Nota: ${listCSS[i].score}</li>
             </ul>
@@ -72,9 +90,9 @@ export function findTopFive() {
         }
     }
     else {
-        var tabelaCSS = document.querySelector(".theme2");
+        var tableCSS = document.querySelector(".theme2");
         for (let i = 0; i < listCSS.length; i++) {
-            tabelaCSS.innerHTML += `
+            tableCSS.innerHTML += `
             <ul>
                 <li>${listCSS[i].name} : Nota: ${listCSS[i].score}</li>
             </ul>
@@ -83,9 +101,9 @@ export function findTopFive() {
     }
 
     if (listJS.length >= 5) {
-        var tabelaJS = document.querySelector(".theme3");
+        var tableJS = document.querySelector(".theme3");
         for (let i = 0; i < 5; i++) {
-            tabelaJS.innerHTML += `
+            tableJS.innerHTML += `
             <ul>
                 <li>${listJS[i].name} : Nota: ${listJS[i].score}</li>
             </ul>
@@ -93,9 +111,9 @@ export function findTopFive() {
         }
     }
     else {
-        var tabelaJS = document.querySelector(".theme3");
+        var tableJS = document.querySelector(".theme3");
         for (let i = 0; i < listJS.length; i++) {
-            tabelaJS.innerHTML += `
+            tableJS.innerHTML += `
             <ul>
                 <li>${listJS[i].name} : Nota: ${listJS[i].score}</li>
             </ul>

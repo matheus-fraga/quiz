@@ -25,15 +25,17 @@ export function showAverage() {
         averageRN += resultsArray[i].score;
     }
     averageRN = averageRN / resultsArray.length;
+    averageRN = averageRN * 10;
     for (let i = 0; i < resultsArray.length; i++) {
         averageWN += 10 - resultsArray[i].score;
     }
     averageWN = averageWN / resultsArray.length;
+    averageWN = averageWN * 10;
 
     let averageRight = document.querySelector("#ok");
     let averageWrong = document.querySelector("#not-ok");
-    averageRight.innerText = `Media de Acertos: ${averageRN.toFixed(2)}`;
-    averageWrong.innerText = `Media de Erros: ${averageWN.toFixed(2)}`;
+    averageRight.innerText = `Media de Acertos: ${averageRN.toFixed(2)}%`;
+    averageWrong.innerText = `Media de Erros: ${averageWN.toFixed(2)}%`;
 }
 
 // Função que printa as 5 melhores notas
